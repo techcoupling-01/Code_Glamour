@@ -1,0 +1,61 @@
+commands on sequence--
+
+npm init
+npm install
+npm install express cors sequelize mysql2 path
+npx sequelize-cli init
+npx sequelize-cli model:generate --name User --attributes name:string,mobile:string,password:string,role:string,status:string
+npx sequelize-cli model:generate --name Branch --attributes name:string,address:string,status:string
+npx sequelize-cli model:generate --name Staff --attributes name:string,mobile:string,address:string,join_date:date,leaving_date:date,type:string,salary_type:string,base_salary:float,branchid:integer,userid:integer
+
+npx sequelize-cli model:generate --name StaffAttendance --attributes staffid:integer,date:date,status:string
+chnges like   status: {
+       type: Sequelize.ENUM("Absent", "Half-Day")
+      },
+ done
+
+ npx sequelize-cli model:generate --name StaffSalary --attributes staffid:integer,month:integer,year:integer,paymentdate:date,amount:float,mode:string
+
+ npx sequelize-cli model:generate --name StaffAdvance --attributes staffid:integer,month:integer,year:integer,paymentdate:date,amount:float,mode:string
+
+npx sequelize-cli model:generate --name Category --attributes title:string,desp:text,image:string,status:string
+
+npx sequelize-cli model:generate --name SubCategory --attributes title:string,desp:text,cateid:integer,image:string,status:string
+
+npx sequelize-cli model:generate --name Brand --attributes title:string,image:string
+
+npx sequelize-cli model:generate --name Product --attributes cateid:integer,subcateid:integer,brandid:integer,model_number:string,unit:string,desp:text,price_per_unit:float
+unit: {
+        type: Sequelize.ENUM("Sq.Ft", "Bag", "Piece", "Box")
+      },
+
+npx sequelize-cli model:generate --name Client --attributes name:string,mobile:string,email:string,address:string,type:string,gstnumber:string
+type: {
+       type: Sequelize.ENUM("purchasedealer", "salesdealer", "client")
+      },
+
+npx sequelize-cli model:generate --name Purchase --attributes dealerid:integer,billAmount:float,invoicenumber:string,date:date
+
+
+
+npx sequelize-cli model:generate --name PurchaseItems --attributes product:integer,purchase:integer,quantity:float,amount:float
+
+
+npx sequelize-cli model:generate --name Sales --attributes clientid:integer,dealerid:integer,type:string,date:date,billamount:float,branchid:integer,status:string
+type: {
+        type: Sequelize.ENUM("customer", "dealer"),
+      },
+      status: {
+        type: Sequelize.ENUM("booked", "dispatched", "done"),
+      },
+
+npx sequelize-cli model:generate --name SalesItems --attributes product:integer,sales:integer,quantity:float,amount:float
+
+
+npx sequelize-cli model:generate --name MissingItem --attributes productid:integer,qty:float,type:string
+type: {
+  type: Sequelize.ENUM("missing", "damage", "lost")
+}
+
+
+corrected all the fk and field name and soonn...... 
