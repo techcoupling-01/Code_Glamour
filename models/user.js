@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.belongsTo(models.Branch,{
+        foreignKey: "name", as: "branch"
+      })
+
     }
   }
   User.init({

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       Staff.belongsTo(models.Branch,{
         foreignKey: "branchid"
       });
-      Staff.belongsTo(models.user,{
+      Staff.belongsTo(models.User,{
         foreignKey: "userid"
       })
     }
@@ -28,7 +28,6 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING,
     salary_type: DataTypes.STRING,
     base_salary: DataTypes.FLOAT,
-    userid: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Staff',
