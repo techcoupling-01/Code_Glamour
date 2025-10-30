@@ -29,11 +29,6 @@ router.post("/register",async (req,res)=>{
         if (existingMobile) {
             return res.json(new ApiResponse(false, "Mobile Already Registered", null, null));
         }
-        //Password Encrypt
-        const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(obj.password, saltRounds);
-        obj.password = hashedPassword;
-        
         await User.create(obj);
         res.json(new ApiResponse(true,"Successfully Registered",null,null));
         }catch(error){

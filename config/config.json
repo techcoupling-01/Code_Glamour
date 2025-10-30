@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "8817",
-    "database": "Imarble_db",
+    "password": "spks1430",
+    "database": "Imarbledb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

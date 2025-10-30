@@ -27,7 +27,7 @@ module.exports = {
       },
       branch: {
         allowNull: true,
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         references:{
           model : "Branches" , key : "id"
         }
