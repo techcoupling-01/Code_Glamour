@@ -26,8 +26,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       branch: {
-        allowNull: false,
-        type: Sequelize.STRING
+        allowNull: true,
+        type: Sequelize.STRING,
+        references:{
+          model : "Branches" , key : "id"
+        }
       },
       status: {
         allowNull: false,

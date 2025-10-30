@@ -18,6 +18,7 @@ module.exports = {
         type: Sequelize.TEXT,
       },
       image: {
+        allowNull: false,
         type: Sequelize.STRING,
       },
       hsn_code: {

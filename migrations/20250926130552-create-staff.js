@@ -30,7 +30,7 @@ module.exports = {
       },
       type: {
         allowNull: false,
-        type: Sequelize.ENUM("Manager","Dispatcher",)
+        type: Sequelize.ENUM("Manager","Dispatcher","Receptionist","Worker"),
       },
       salary_type: {
         allowNull: false,
