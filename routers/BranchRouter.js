@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Branch } = require('../models/index');
 const ApiResponse = require('../utils/ApiResponse');
 
+
 router.post("/add", async (req, res) => {
     try {
         const branch = await Branch.create(req.body);
