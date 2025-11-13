@@ -9,7 +9,7 @@ module.exports = {
         mobile: '8602155444',
         password: 'Asd7788#',
         role: 'admin',
-        branch: null,
+       // branch: null,
         status: true,
         createdAt: new Date(),
         updatedAt: new Date(),

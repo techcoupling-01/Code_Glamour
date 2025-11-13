@@ -24,7 +24,8 @@ router.use((req,res,next)=>{
     }
 });
 
-router.use("/admin",admin);     
+router.use("/admin",admin);  
+   
 
 module.exports = router;
 

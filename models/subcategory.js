@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      SubCategory.belongsTo(models.Catogory,{
+      SubCategory.belongsTo(models.Category,{
         foreignKey: "cateid"
       })
     }

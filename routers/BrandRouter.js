@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const ApiResponse = require('../utils/ApiResponse');
-const {Brand} = require('..models/index');
+const {Brand} = require('../models/index');
 
 router.post("/add",async (req,res)=>{
     try{
